@@ -4,60 +4,158 @@
     <title>Webbutveckling-Labb1</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Bootstrap CSS v5.3.0 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+
+    <!-- Bootstrap Icons v.1.5.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS Stylesheet Index -->
+    <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body>
-    <header>
+  <body class="d-flex flex-column min-vh-100">
+    <header class="container-fluid bg-dark sticky-top">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand my-3 ms-1 p-0" href="#">
+          <img
+            class=""
+            src="/Images/Longwater Records No Text.png"
+            height="100"
+            alt=""
+            loading="lazy"
+          />
+        </a>
 
-      <div class="p-5 bg-primary text-white text-center">
-        <h1>My First Bootstrap 5 Page</h1>
-        <p>Dojdoj</p>
-      </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
 
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Link 1</a>
+        <div class="collapse navbar-collapse p-5" id="navmenu">
+          <ul class="navbar-nav ms-auto mb-2 h5">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="/Index/index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Link 2</a>
+              <a class="nav-link" aria-current="page" href="/About/about.html"
+                >About Us</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Link 3</a>
+              <a class="nav-link" aria-current="page" href="/Shop/shop.html">
+                Shop
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main>
-      
+      <!-- Info -->
+      <section class="container-fluid text-white">
+        <div class="bg-dark mx-4 my-5 p-5">
+          <div class="row d-flex align-items-center">
+            <div class="col d-none d-lg-block">
+              <img
+                class="img-fluid"
+                src="/Images/Longwater Records No Text.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="col text-center">
+              <p class="display-1 pb-3 border-bottom border-top">
+                Longwater Records
+              </p>
+            </div>
+            <div class="col d-none d-lg-block">
+              <img
+                class="img-fluid"
+                src="/Images/Longwater Records No Text.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                natus reiciendis incidunt culpa rerum? Quia alias ab blanditiis,
+                autem pariatur adipisci animi rerum modi aspernatur tempore
+                beatae. Culpa assumenda soluta doloremque omnis quasi nulla
+                debitis reiciendis necessitatibus unde officia obcaecati,
+                praesentium nobis ducimus quod libero iure, impedit quae.
+                Impedit recusandae unde quis mollitia veritatis delectus, totam
+                iste in aspernatur suscipit quae animi consequatur quas
+                voluptates neque accusamus deserunt accusantium vero. Optio
+                architecto tempora praesentium! Obcaecati, fugiat eveniet.
+                Distinctio sit quis similique ullam velit blanditiis, eum ut
+                dolor minus? Eum aperiam consequuntur adipisci, animi optio
+                odio? Incidunt quod omnis fuga adipisci!
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum illum dolorum ipsa! Architecto perferendis dolor dolorum
+                delectus, impedit laudantium enim temporibus expedita officia
+                placeat asperiores consectetur facilis non cumque ad id
+                reiciendis eligendi? Minima praesentium, omnis maxime voluptate
+                cumque veniam repellat quam sed mollitia corporis assumenda
+                necessitatibus. Exercitationem reprehenderit sequi minus eaque
+                dolores illo suscipit veritatis voluptas saepe, expedita dolore
+                omnis porro voluptates alias consequuntur sunt vel fuga dicta.
+                Ducimus hic veniam, esse expedita possimus ea necessitatibus rem
+                sed ullam tempore perferendis nemo dolorem nesciunt fuga
+                facilis? Aliquid, laborum, exercitationem doloribus nihil
+                obcaecati deserunt porro eaque nobis tempora qui odit!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <!-- place footer here -->
+
+    <!-- Footer -->
+    <footer class="container-fluid py-3 mt-auto bg-dark footer-dark text-white">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2">Shop</a>
+        </li>
+      </ul>
+      <p class="text-center">Copyright © Longwater Records 2023</p>
     </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
   </body>
