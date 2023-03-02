@@ -1,3 +1,40 @@
-body {
-    background-image: url('/Images/wallpaperflare.com_wallpaper.jpg');
+.nav-item {
+    margin-left: 2em;
 }
+
+.nav-item .active{
+    text-decoration: underline;
+}
+
+textarea {
+    height: 10em;
+}
+
+.bg-cream {
+    background-color: #f3eae3;
+}
+
+.card h3 {
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.parallax {
+    background-image: url('/Images/wallpaperflare.com_wallpaper.jpg');
+
+    min-height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 
+Vissa Bilder är 235x235 istället för 300x300 
+Detta kanske förstör den responsiva designen av bootstrap
+*/
+/* .card-img-top {
+    height: 300px;
+    width:  300px;
+} */
