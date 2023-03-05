@@ -1,62 +1,102 @@
-// Visa listan av produkter/tjänster.
+import albumsJson from "./albums.json" assert { type: "json" };
 
-class Album {
-    constructor(bandName, albumName, price, coverArt) {
-        this.bandName = bandName;
-        this.albumName = albumName;
-        this.price = price;
-        this.coverArt = coverArt;
+// Create template and initial divs
+const shop = document.getElementById("shopDiv");
 
-    }
+const initRow = createRow();
+shop.appendChild(initRow);
 
-    getAlbumFromJSON() {
-        var album = JSON.parse(fs.readFileSync(filePath));
-        return album;
-    }
+for (const newAlbum of albumsJson) {
+  const col = createColumn();
+  col.appendChild(createAlbumCard(newAlbum));
+  col.appendChild(createModal(newAlbum));
+
+  const lastRow = shop.lastChild;
+
+  const colsInRowList = lastRow.childNodes.length;
+
+  if (colsInRowList === 4) {
+    const row = createRow();
+    shop.appendChild(row);
+    row.appendChild(col);
+  } else {
+    lastRow.appendChild(col);
+  }
 }
 
+function createColumn() {
+  const column = document.createElement("div");
+  column.setAttribute(
+    "class",
+    "col-lg-3 col-md-6 mb-3 d-flex align-items-stretch"
+  );
+  return column;
+}
 
+function createRow() {
+  const row = document.createElement("div");
+  row.setAttribute("class", "row");
+  shop.appendChild(row);
+  return row;
+}
 
-const shop = document.getElementById("shopDiv");
-const row = '<div class="row"></div>';
-const col = '<div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch"></div>';
-const helaskiten = '<div class="row"><div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch"><div class="card bg-cream text-dark"><img src="/Images/Products/Dogrel.jpg"alt=""class="img-fluid card-img-top"/><div class="card-body d-flex flex-column"><div class="card-title mb-3"><h3>Fontaines D.C.</h3><h2 class="mb-3">Dogrel</h2></div><div class="d-flex justify-content-between mt-auto"><h4 class="card-title"><strong>269</strong> Kr</h4><button class="btn btn-primary">Add to Cart</button></div></div></div></div></div></div>';
+function createAlbumCard(album) {
+  const card = document.createElement("div");
 
-shop.innerHTML = helaskiten;
+  card.innerHTML = `
+  <div class="card bg-cream text-dark">
+  <img
+  src="${album.coverArtUrl}"
+  alt="${album.albumName} Cover Art"
+  class="img-fluid card-img-top"
+  />
+  <div class="card-body d-flex flex-column">
+  <div class="card-title mb-3">
+          <h3>${album.bandName}</h3>
+          <h2 class="mb-3">${album.albumName}</h2>
+        </div>
+        <div class="d-flex justify-content-between mt-auto">
+        <h4 class="card-title"><strong>${album.price}</strong> Kr</h4>
+        <button class="btn btn-primary">Add to Cart</button>
+        </div>
+        </div>
+        </div>`;
 
-// Take the info from the album and create a card from it using variables in the class 'Album'
-// Write a method that adds a new row if there are more than 4 cards in a collection
+  return card;
+}
 
-// Card Template
-//<div class="row">
-//
-//<div class="col-lg-3 col-md-6 mb-3 d-flex align-items-stretch">
-//  <div class="card bg-cream text-dark">
-//    <img
-//      src="/Images/Products/Dogrel.jpg"
-//      alt=""
-//      class="img-fluid card-img-top"
-//    />
-//    <div class="card-body d-flex flex-column">
-//      <div class="card-title mb-3">
-//        <h3>Fontaines D.C.</h3>
-//        <h2 class="mb-3">Dogrel</h2>
-//      </div>
-//      <div class="d-flex justify-content-between mt-auto">
-//        <h4 class="card-title"><strong>269</strong> Kr</h4>
-//        <button class="btn btn-primary">Add to Cart</button>
-//      </div>
-//    </div>
-//  </div>
-//</div>
-//
-//</div>
-//
-//</div>
+function createModal(album) {
+  const modal = document.createElement("div");
+
+  modal.innerHTML = `
+  <div class="modal" id="${album.albumName}Modal">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+  `;
+
+  return modal;
+}
 
 // Visa kundvagnen.
 
-
-
 // Lägga till och ta bort saker ur kundvagnen.
-

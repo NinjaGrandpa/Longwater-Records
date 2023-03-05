@@ -19,10 +19,8 @@ textarea {
     font-size: .8rem;
 }
 
-.parallax {
+body {
     background-image: url('/Images/wallpaperflare.com_wallpaper.jpg');
-
-    min-height: 500px;
 
     background-attachment: fixed;
     background-position: center;
