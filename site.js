@@ -47,8 +47,6 @@ function addAlbumToCart(album) {
 }
 
 function removeFromCart(album) {
-  const cart = document.getElementById("cartContainer");
-  const existingAlbum = document.getElementById(`${album.albumname}Id`);
   const amount = document.getElementById(`${album.albumName}InCart`);
 
   if (parseInt(amount.innerHTML) > 1) {
