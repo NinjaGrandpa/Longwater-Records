@@ -31,8 +31,6 @@ for (const newAlbum of albumsJson) {
 function addAlbumToCart(album) {
   const cart = document.getElementById("cartContainer");
   const existingAlbum = document.getElementById(`${album.albumName}Id`);
-  // If card already exists in cart increase amount by 1
-  // else create new card and append
 
   if (existingAlbum) {
     const amount = document.getElementById(`${album.albumName}InCart`);
@@ -40,26 +38,35 @@ function addAlbumToCart(album) {
   } else {
     cart.appendChild(createCartCard(album));
     const removeButton = document.getElementById(`${album.albumName}Remove`);
-    removeButton.addEventListener("click", function() {
+    removeButton.addEventListener("click", function () {
       removeFromCart(album);
     });
   }
+
+  updateTotalCart(album.price);
+}
+
+function updateTotalCart(cost) {
+  const total = document.getElementById("cartTotal");
+
+  total.innerHTML = parseInt(total.innerHTML) + parseInt(cost);
 }
 
 function removeFromCart(album) {
   const amount = document.getElementById(`${album.albumName}InCart`);
 
   if (parseInt(amount.innerHTML) > 1) {
-    amount.innerHTML = parseInt(amount.innerHTML) - 1;  
-  } 
-  else {
+    amount.innerHTML = parseInt(amount.innerHTML) - 1;
+  } else {
     document.getElementById(`${album.albumName}Id`).remove();
   }
+  
+  updateTotalCart((-1 * album.price))
 }
 
 function createCartCard(album) {
   const card = document.createElement("div");
-  card.setAttribute(`id`,`${album.albumName}Id`)
+  card.setAttribute(`id`, `${album.albumName}Id`);
   card.innerHTML = `
   <div id="" class="card mb-3 bg-cream text-dark">
               <div class="card-body">
