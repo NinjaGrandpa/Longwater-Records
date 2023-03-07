@@ -105,8 +105,8 @@
       <!-- Info Section -->
 
       <!-- Contact Section -->
-      <section class="container-fluid text-white">
-        <div class="bg-dark mx-4 my-5 p-5">
+      <section class="row container-fluid text-white">
+        <div class="col bg-dark mx-4 my-5 p-5">
           <h1 class="mb-5">Contact</h1>
           <form action="#" class="was-validated">
             <div class="row mb-2">
@@ -193,6 +193,27 @@
             </div>
           </form>
         </div>
+
+        <div class="col bg-dark mx-4 my-5 p-5 d-flex justify-content-center align-items-center">
+          <div id="google-maps-container">
+            <div
+              id="google-maps-display"
+            >
+              <iframe
+                style="height: 100%; width: 100%; border: 0"
+                frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=Gamla+torget,+Kvarnbygatan,+Mölndal,+Sweden&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              ></iframe>
+            </div>
+            <a
+              class="googlecoder"
+              rel="nofollow"
+              href="https://www.bootstrapskins.com/themes"
+              id="get-map-data"
+              >premium bootstrap themes</a
+            >
+          </div>
+        </div>
       </section>
       <!-- Contact Section -->
     </main>
@@ -220,5 +241,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
   </body>
 </html>

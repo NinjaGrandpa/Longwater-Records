@@ -3,48 +3,14 @@
     "albumName": "Dogrel",
     "bandName": "Fontaines D.C.",
     "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
-  },
-  {
-    "albumName": "Dogrel",
-    "bandName": "Fontaines D.C.",
-    "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
-  },
-  {
-    "albumName": "Dogrel",
-    "bandName": "Fontaines D.C.",
-    "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
-  },
-  {
-    "albumName": "Dogrel",
-    "bandName": "Fontaines D.C.",
-    "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
-  },
-  {
-    "albumName": "Dogrel",
-    "bandName": "Fontaines D.C.",
-    "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
-  },
-  {
-    "albumName": "Dogrel",
-    "bandName": "Fontaines D.C.",
-    "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
-  },
-  {
-    "albumName": "Dogrel",
-    "bandName": "Fontaines D.C.",
-    "coverArtUrl": "/Images/Products/Dogrel.jpg",
-    "price": 269
+    "price": 269,
+    "amount": 1
   },
   {
     "albumName": "Jehova",
     "bandName": "Hurula",
     "coverArtUrl": "/Images/Products/Jehova.jpg",
-    "price": 289
+    "price": 289,
+    "amount": 1
   }
 ]

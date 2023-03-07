@@ -1,6 +1,5 @@
 import albumsJson from "./albums.json" assert { type: "json" };
 
-// Create template and initial divs
 const shop = document.getElementById("shopDiv");
 
 const initRow = createRow();
@@ -22,6 +21,77 @@ for (const newAlbum of albumsJson) {
   } else {
     lastRow.appendChild(col);
   }
+
+  const cartButton = document.getElementById(`${newAlbum.albumName}CartButton`);
+  cartButton.addEventListener("click", function () {
+    addAlbumToCart(newAlbum);
+  });
+}
+
+function addAlbumToCart(album) {
+  const cart = document.getElementById("cartContainer");
+  const existingAlbum = document.getElementById(`${album.albumName}Id`);
+  // If card already exists in cart increase amount by 1
+  // else create new card and append
+
+  if (existingAlbum) {
+    const amount = document.getElementById(`${album.albumName}InCart`);
+    amount.innerHTML = parseInt(amount.innerHTML) + 1;
+  } else {
+    cart.appendChild(createCartCard(album));
+    const removeButton = document.getElementById(`${album.albumName}Remove`);
+    removeButton.addEventListener("click", function() {
+      removeFromCart(album);
+    });
+  }
+}
+
+function removeFromCart(album) {
+  const cart = document.getElementById("cartContainer");
+  const existingAlbum = document.getElementById(`${album.albumname}Id`);
+  const amount = document.getElementById(`${album.albumName}InCart`);
+
+  if (parseInt(amount.innerHTML) > 1) {
+    amount.innerHTML = parseInt(amount.innerHTML) - 1;  
+  } 
+  else {
+    document.getElementById(`${album.albumName}Id`).remove();
+  }
+}
+
+function createCartCard(album) {
+  const card = document.createElement("div");
+  card.setAttribute(`id`,`${album.albumName}Id`)
+  card.innerHTML = `
+  <div id="" class="card mb-3 bg-cream text-dark">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-row align-items-center">
+                    <div>
+                      <img
+                        src="${album.coverArtUrl}"
+                        class="img-fluid rounded-3" 
+                        alt="Shopping item" style="width: 65px;">
+                    </div>
+                    <div class="ms-3">
+                      <h5>${album.albumName}</h5>
+                      <p class="small mb-0">${album.bandName}</p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center">
+                    <div style="width: 50px;">
+                      <h5 id="${album.albumName}InCart" class="fw-normal mb-0">1</h5>
+                    </div>
+                    <div style="width: 80px;">
+                      <h5 class="mb-0">${album.price} kr</h5>
+                    </div>
+                    <a id="${album.albumName}Remove" href="#"><i class="bi bi-trash"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  `;
+  return card;
 }
 
 function createColumn() {
@@ -57,7 +127,7 @@ function createAlbumCard(album) {
         </div>
         <div class="d-flex justify-content-between mt-auto">
         <h4 class="card-title"><strong>${album.price}</strong> Kr</h4>
-        <button class="btn btn-primary">Add to Cart</button>
+        <button id="${album.albumName}CartButton" class="btn btn-primary">Add to Cart</button>
         </div>
         </div>
         </div>`;

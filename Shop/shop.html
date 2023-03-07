@@ -64,6 +64,16 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"> Shop </a>
             </li>
+            <li class="nav-item ms-auto">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasId"
+                ><span id="basketIcon" class="bi bi-basket"></span
+              ></a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -71,7 +81,36 @@
     <!-- Navbar Section -->
 
     <main>
-      
+      <!-- Offcanvas Sidebar -->
+      <div class="text-bg-dark offcanvas offcanvas-end" id="offcanvasId">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Cart</h1>
+          <button
+            type="button"
+            class="btn-close btn-close-white text-reset"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body container">
+          
+          <div id="cartContainer">
+            
+          </div>
+
+          <div class="container d-flex align-items-center justify-content-between">
+            <button class="btn btn-primary" type="button">
+              <span class="bi bi-basket"></span>
+              Checkout
+              <span class="bi bi-basket"></span>
+            </button>
+            <h1 class="h5">Total: *** Kr</h1>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Button to open the offcanvas sidebar -->
+
       <!-- Product Cards Section -->
       <section class="container-fluid text-white">
         <div class="bg-dark mx-4 my-5 p-5">
@@ -83,7 +122,6 @@
         </div>
       </section>
       <!-- Product Cards Section -->
-
     </main>
 
     <!-- Footer Section -->
@@ -97,6 +135,11 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link px-2">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2"
+            ><span class="bi bi-basket"></span
+          ></a>
         </li>
       </ul>
       <p class="text-center">Copyright © Longwater Records 2023</p>
