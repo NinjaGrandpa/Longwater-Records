@@ -7,6 +7,20 @@
     "amount": 1
   },
   {
+    "albumName": "A Hero's Death",
+    "bandName": "Fontaines D.C.",
+    "coverArtUrl": "/Images/Products/A Hero's Death.jpg",
+    "price": 289,
+    "amount": 1
+  },
+  {
+    "albumName": "Blade Runner (Original Sountrack)",
+    "bandName": "Vangelis",
+    "coverArtUrl": "/Images/Products/Blade Runner.jpg",
+    "price": 269,
+    "amount": 1
+  },
+  {
     "albumName": "Jehova",
     "bandName": "Hurula",
     "coverArtUrl": "/Images/Products/Jehova.jpg",

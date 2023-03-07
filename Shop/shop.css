@@ -1,37 +1,36 @@
 .nav-item {
-    margin-left: 2em;
+  margin-left: 2em;
 }
 
-.nav-item .active{
-    text-decoration: underline;
+.nav-item .active {
+  text-decoration: underline;
 }
 
 textarea {
-    height: 10em;
+  height: 10em;
 }
 
 .bg-cream {
-    background-color: #f3eae3;
+  background-color: #f3eae3;
 }
 
 .card h3 {
-    text-transform: uppercase;
-    font-size: .8rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 
 body {
-    background-image: url('/Images/wallpaperflare.com_wallpaper.jpg');
+  background-image: url("/Images/wallpaperflare.com_wallpaper.jpg");
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #basketIcon {
-    font-size: 70px;
+  font-size: 70px;
 }
-
 /* 
 Vissa Bilder är 235x235 istället för 300x300 
 Detta kanske förstör den responsiva designen av bootstrap
