@@ -81,6 +81,25 @@
     <!-- Navbar Section -->
 
     <main>
+      <div class="p-0 m-2 ms-auto d-flex justify-content-end container">
+        <div class="alert alert-success alert-dismissible fade show col-3">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+          ></button>
+          <strong>Success!</strong> Product added to cart
+          <div id="alertAmount" class="d-flex align-items-center mt-1">
+            <div class="border rounded-5 px-3 py-1 border-dark">
+              <h1 class="h5">1</h1>
+            </div>
+            <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasId">
+              <span id="basketIcon" class="bi bi-basket"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Offcanvas Sidebar -->
       <div class="text-bg-dark offcanvas offcanvas-end" id="offcanvasId">
         <div class="offcanvas-header">
@@ -92,12 +111,11 @@
           ></button>
         </div>
         <div class="offcanvas-body container">
-          
-          <div id="cartContainer">
-            
-          </div>
+          <div id="cartContainer"></div>
 
-          <div class="container d-flex align-items-center justify-content-between">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
             <button class="btn btn-primary" type="button">
               <span class="bi bi-basket"></span>
               Checkout
@@ -105,7 +123,6 @@
             </button>
             <h1 class="h5">Total: <span id="cartTotal">0</span> Kr</h1>
           </div>
-
         </div>
       </div>
 
