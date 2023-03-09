@@ -4,7 +4,7 @@ import {
   createColumn,
   createRow,
   createAlbumCard,
-  createModal,
+  createCartAlert,
 } from "./elementModels.js";
 
 const shop = document.getElementById("shopDiv");
@@ -15,7 +15,6 @@ shop.appendChild(initRow);
 for (const newAlbum of albumsJson) {
   const col = createColumn();
   col.appendChild(createAlbumCard(newAlbum));
-  col.appendChild(createModal(newAlbum));
 
   const lastRow = shop.lastChild;
 
@@ -32,6 +31,39 @@ for (const newAlbum of albumsJson) {
   const cartButton = document.getElementById(`${newAlbum.albumName}CartButton`);
   cartButton.addEventListener("click", function () {
     addAlbumToCart(newAlbum);
+  });
+
+  const albumModal = document.getElementById("albumModal");
+  albumModal.addEventListener("show.bs.modal", (event) => {
+    // Button that triggered the modal
+    const button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    const albumName = button.getAttribute("data-bs-albumName");
+    const bandName = button.getAttribute("data-bs-bandName");
+    const price = button.getAttribute("data-bs-price");
+    const iframeURI = button.getAttribute("data-bs-iframe");
+    
+    // Update the modal's content.
+    const modalTitle = albumModal.querySelector(".modal-title");
+    const modalPrice = albumModal.querySelector("#albumModalPrice");
+    const modalCartButton = albumModal.querySelector(".modal-cart-button");
+    const iframeModal = albumModal.querySelector("iframe");
+
+
+    modalTitle.textContent = `${albumName} - ${bandName}`;
+    modalPrice.textContent = price;
+    modalCartButton.id = `${albumName}CartButton`;
+    iframeModal.src = iframeURI;
+
+    modalCartEvent(newAlbum)
+  });
+  
+}
+
+function modalCartEvent(album) {
+  const modalCartButton = document.querySelector(".modal-cart-button");
+  modalCartButton.addEventListener("click", function() {
+    addAlbumToCart(album);
   });
 }
 
@@ -51,12 +83,22 @@ function addAlbumToCart(album) {
   }
 
   updateTotalCart(album.price);
+  updateCartAlert(1);
 }
 
-function updateTotalCart(cost) {
-  const total = document.getElementById("cartTotal");
+function updateCartAlert(amount) {
+  const alertContainer = document.getElementById("cartAlertContainer");
+  const existingAlert = document.getElementById("cartAlert");
 
-  total.innerHTML = parseInt(total.innerHTML) + parseInt(cost);
+  if (!existingAlert) {
+    const alert = createCartAlert();
+    alertContainer.appendChild(alert);
+  }
+
+  const cartAlertAmount = document.getElementById("cartAlertAmount");
+
+  cartAlertAmount.innerText =
+    parseInt(cartAlertAmount.innerHTML) + parseInt(amount);
 }
 
 function removeFromCart(album) {
@@ -69,8 +111,11 @@ function removeFromCart(album) {
   }
 
   updateTotalCart(-1 * album.price);
+  updateCartAlert(-1);
 }
 
-// Visa kundvagnen.
+function updateTotalCart(cost) {
+  const total = document.getElementById("cartTotal");
 
-// Lägga till och ta bort saker ur kundvagnen.
+  total.innerHTML = parseInt(total.innerHTML) + parseInt(cost);
+}

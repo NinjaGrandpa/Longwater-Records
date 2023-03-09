@@ -31,6 +31,20 @@ body {
 #basketIcon {
   font-size: 40px;
 }
+
+.alert {
+  padding-right: 16px;
+}
+
+.bi-circle {
+  position: absolute;
+  font-size: xx-large;
+}
+
+#modalCoverArt {
+  width: 300px;
+  height: 300px;
+}
 /* 
 Vissa Bilder är 235x235 istället för 300x300 
 Detta kanske förstör den responsiva designen av bootstrap

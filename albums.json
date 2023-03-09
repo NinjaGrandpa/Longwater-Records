@@ -4,6 +4,7 @@
     "bandName": "Fontaines D.C.",
     "coverArtUrl": "/Images/Products/Dogrel.jpg",
     "price": 269,
+    "iframe": "https://open.spotify.com/embed/album/5j54NcBr5wBCB129cdjad7?utm_source=generator",
     "amount": 1
   },
   {
@@ -11,6 +12,7 @@
     "bandName": "Fontaines D.C.",
     "coverArtUrl": "/Images/Products/A Hero's Death.jpg",
     "price": 289,
+    "iframe": "https://open.spotify.com/embed/album/5uvoX0fFiT1QFpZXntsI3j?utm_source=generator",
     "amount": 1
   },
   {
@@ -18,6 +20,7 @@
     "bandName": "Vangelis",
     "coverArtUrl": "/Images/Products/Blade Runner.jpg",
     "price": 269,
+    "iframe": "https://open.spotify.com/embed/album/6NkuCdMz5tGmHbOXAWbtCW?utm_source=generator",
     "amount": 1
   },
   {
@@ -25,6 +28,7 @@
     "bandName": "Hurula",
     "coverArtUrl": "/Images/Products/Jehova.jpg",
     "price": 289,
+    "iframe": "https://open.spotify.com/embed/album/7mP40Mlw0dFHLP1sEZLX2h?utm_source=generator",
     "amount": 1
   }
 ]
