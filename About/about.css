@@ -1,5 +1,5 @@
 body {
-    background-image: url('/Images/wallpaperflare.com_wallpaper.jpg');
+    background-image: url('/Images/wallpaperflare.com_wallpaper.webp');
 
     background-attachment: fixed;
     background-position: center;
@@ -11,7 +11,7 @@ body {
     margin-left: 2em;
 }
 
-.nav-item .active{
+.nav-item .active {
     text-decoration: underline;
 }
 
@@ -19,23 +19,32 @@ textarea {
     height: 10em;
 }
 
-#google-maps-display img {
-    max-height: none;
+#gmap-canvas img.text-marker {
     max-width: none !important;
     background: none !important;
-  }
-
-#google-maps-display {
-    height: 100%; 
-    width: 100%; 
-    max-width: 100%"
 }
 
-#google-maps-container {
-    max-width: 100%;
-    list-style: none;
-    transition: none;
+#gmap-canvas {
+    height: 100%;
+    width: 100%;
+    max-width: 100%"
+
+}
+
+#gmap-container {
     overflow: hidden;
+    resize: none;
+    max-width: 100%;
     width: 500px;
     height: 500px;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+img {
+    max-width: none;
 }

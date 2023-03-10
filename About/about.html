@@ -31,10 +31,11 @@
         <div class="navbar-header">
           <a class="navbar-brand my-3 ms-1 p-0" href="#">
             <img
-              class=""
-              src="/Images/Longwater Records No Text.png"
+              class="img-fluid"
+              src="/Images/Longwater Records No Text.webp"
               height="100"
-              alt=""
+              width="96"
+              alt="Longwater Records Logo"
               loading="lazy"
             />
           </a>
@@ -45,6 +46,7 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navmenu"
+          aria-label="navbar-toggler"
         >
           <span class="navbar-toggler-icon"> </span>
         </button>
@@ -80,7 +82,7 @@
             <div class="col d-none d-lg-block">
               <img
                 class="img-fluid"
-                src="/Images/Longwater Records No Text.png"
+                src="/Images/Longwater Records No Text.webp"
                 alt=""
                 loading="lazy"
               />
@@ -106,11 +108,11 @@
 
       <!-- Contact Section -->
       <section class="row container-fluid text-white">
-        <div class="col bg-dark mx-4 my-5 p-5">
+        <div class="col-lg bg-dark mx-4 my-5 p-5">
           <h1 class="mb-5">Contact</h1>
           <form action="#" class="was-validated">
             <div class="row mb-2">
-              <div class="col mb-3">
+              <div class="col-lg-6 mb-3">
                 <label for="firstName" class="form-label me-3"
                   >First Name</label
                 >
@@ -128,7 +130,7 @@
                 </div>
               </div>
 
-              <div class="col mb-3">
+              <div class="col-lg-6 mb-3">
                 <label for="lastName" class="form-label">Last Name</label>
                 <div class="input-group">
                   <span class="input-group-text bi-blockquote-right"></span>
@@ -144,7 +146,7 @@
             </div>
 
             <div class="row mb-2">
-              <div class="col mb-3">
+              <div class="col-lg-6 mb-3">
                 <label for="emailAdress" class="form-label me-3">Email</label>
                 <div class="input-group">
                   <span class="input-group-text bi-envelope-at"></span>
@@ -160,7 +162,7 @@
                 </div>
               </div>
 
-              <div class="col mb-3">
+              <div class="col-lg-6 mb-3">
                 <label for="adress" class="form-label">Phone</label>
                 <div class="input-group">
                   <span class="input-group-text bi-telephone"></span>
@@ -194,24 +196,25 @@
           </form>
         </div>
 
-        <div class="col bg-dark mx-4 my-5 p-5 d-flex justify-content-center align-items-center">
-          <div id="google-maps-container">
-            <div
-              id="google-maps-display"
-            >
-              <iframe
-                style="height: 100%; width: 100%; border: 0"
-                frameborder="0"
-                src="https://www.google.com/maps/embed/v1/place?q=Gamla+torget,+Kvarnbygatan,+Mölndal,+Sweden&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-              ></iframe>
+        <div class="col-lg bg-dark mx-4 my-5 p-5">
+          <h1 class="mb-5">Map</h1>
+          <div class="d-flex justify-content-center align-items-center">
+            <div id="gmap-container">
+              <div
+                id="gmap-canvas">
+                <iframe
+                  loading="lazy"
+                  frameborder="0"
+                  src="https://www.google.com/maps/embed/v1/place?q=Gamla+torget,+Kvarnbygatan,+Mölndal,+Sweden&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+              <a
+                class="google-maps-html"
+                href="https://www.bootstrapskins.com/themes"
+                id="get-map-data"
+                >premium bootstrap themes</a
+              >
             </div>
-            <a
-              class="googlecoder"
-              rel="nofollow"
-              href="https://www.bootstrapskins.com/themes"
-              id="get-map-data"
-              >premium bootstrap themes</a
-            >
           </div>
         </div>
       </section>
@@ -241,6 +244,5 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
   </body>
 </html>
