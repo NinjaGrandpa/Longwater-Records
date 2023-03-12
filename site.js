@@ -4,6 +4,7 @@ import {
   createColumn,
   createRow,
   createAlbumCard,
+  createAlbumModal,
   createCartAlert,
 } from "./elementModels.js";
 
@@ -33,37 +34,15 @@ for (const newAlbum of albumsJson) {
     addAlbumToCart(newAlbum);
   });
 
+  const modaldiv = document.getElementById("modalDiv");
+  const albumModal = createAlbumModal(newAlbum);
+  modaldiv.appendChild(albumModal);
   
+  const modalCartButton = document.getElementById(`${newAlbum.albumName}CartButton`);
+  modalCartButton.addEventListener("click", function() {
+    addAlbumToCart(newAlbum);
+  });
 }
-
-const albumModal = document.getElementById("albumModal");
-albumModal.addEventListener("show.bs.modal", (event) => {
-  // Button that triggered the modal
-  const button = event.relatedTarget;
-  // Extract info from data-bs-* attributes
-  const albumName = button.getAttribute("data-bs-albumName");
-  const bandName = button.getAttribute("data-bs-bandName");
-  const price = button.getAttribute("data-bs-price");
-  const iframeURI = button.getAttribute("data-bs-iframe");
-  
-  // Update the modal's content.
-  const modalTitle = albumModal.querySelector(".modal-title");
-  const modalPrice = albumModal.querySelector("#albumModalPrice");
-  const modalCartButton = albumModal.querySelector("#modalCartButton");
-  const iframeModal = albumModal.querySelector("iframe");
-
-
-  modalTitle.textContent = `${albumName} - ${bandName}`;
-  modalPrice.textContent = price;
-  // modalCartButton.id = `${albumName}ModalCartButton`;
-  iframeModal.src = iframeURI;
-
-  const album = albumsJson.find(a => a.albumName == albumName);
-  console.log(album);
-
-  modalCartButton.addEventListener("click", (event) => {addAlbumToCart(album)});
-});
-
 
 function addAlbumToCart(album) {
   const cart = document.getElementById("cartContainer");

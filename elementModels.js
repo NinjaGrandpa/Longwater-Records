@@ -54,6 +54,8 @@ const createRow = function () {
 const createAlbumCard = function (album) {
   const card = document.createElement("div");
 
+  const modalId = album.albumName.replace(" ", "_").replace("'", "");
+
   card.innerHTML = `
     <div class="card bg-cream text-dark">
    
@@ -64,12 +66,7 @@ const createAlbumCard = function (album) {
     data-bs-toggle="modal" 
     data-bs-toggle="tooltip"
     title="Click For More Album Information" 
-    data-bs-target="#albumModal"
-    data-bs-albumName="${album.albumName}"
-    data-bs-bandName="${album.bandName}"
-    data-bs-coverArtUrl="${album.coverArtUrl}"
-    data-bs-price="${album.price}"
-    data-bs-iframe="${album.iframe}"
+    data-bs-target="#${modalId}AlbumModal"
     />
     <div class="card-body d-flex flex-column">
     <div class="card-title mb-3">
@@ -87,6 +84,73 @@ const createAlbumCard = function (album) {
 
   return card;
 };
+
+function createAlbumModal(album) {
+  const modal = document.createElement("div");
+  const modalId = album.albumName.replace(" ", "_").replace("'", "");
+
+  modal.innerHTML = `
+  <div
+            class="modal fade"
+            id="${modalId}AlbumModal"
+            tabindex="-1"
+            aria-labelledby="albumModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                  <h1 class="modal-title fs-5" id="albumModalLabel">
+                    ${album.albumName} - ${album.bandName}
+                  </h1>
+                  <button
+                    type="button"
+                    class="bi bi-x-lg bg-dark text-white border-0"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-bg-dark">
+                  <iframe
+                    style="border-radius: 12px"
+                    src="${album.spotifyURL}"
+                    width="100%"
+                    height="352"
+                    frameborder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  ></iframe>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    consectetur facere illum aperiam explicabo nulla, impedit
+                    cum necessitatibus sint! Quod magni dolorum consequuntur hic
+                    doloremque perferendis enim at cumque earum.
+                  </p>
+                </div>
+                <div class="modal-footer text-bg-dark">
+                  <h1 class="me-auto"><span id="albumModalPrice">${album.price}</span> kr</h1>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    id="${album.albumName}CartButton"
+                    type="button"
+                    class="btn btn-primary modal-cart-button"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+  `;
+  return modal;
+}
 
 function createCartAlert() {
   const alert = document.createElement("div");
@@ -134,5 +198,6 @@ export {
   createColumn,
   createRow,
   createAlbumCard,
+  createAlbumModal,
   createCartAlert
 };
