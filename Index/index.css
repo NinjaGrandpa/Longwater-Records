@@ -26,3 +26,33 @@ body {
 p {
     font-family: 'Gentium Plus', serif;
 }
+
+
+/* background-color: #301E67; */
+
+
+.bg-dark {
+    background-color: #03001C !important;
+}
+
+.border, .border-bottom {
+    border-color: #5B8FB9 !important;
+}
+
+a:hover {
+    color: #5B8FB9 !important;
+}
+
+.btn-primary {
+    background-color: #5B8FB9 !important;
+    color:#5B8FB9 !important;
+}
+
+.text-white, a, h1 {
+    color: #B6EADA !important;
+}
+
+
+.paragraph {
+    background-color: #301E67 !important;
+}

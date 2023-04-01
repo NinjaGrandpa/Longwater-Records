@@ -56,3 +56,23 @@ h1, button, a, label {
 p, input {
     font-family: 'Gentium Plus', serif;
 }
+
+.bg-dark {
+    background-color: #03001C !important;
+}
+
+.border, .border-bottom, {
+    border-color: #5B8FB9 !important;
+}
+
+.text-white, a, h1, ::placeholder {
+    color: #B6EADA !important;
+}
+
+input, textarea {
+    background-color: #301E67 !important;
+}
+
+a:hover {
+    color: #5B8FB9 !important;
+}
