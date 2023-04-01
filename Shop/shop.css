@@ -45,11 +45,11 @@ body {
   width: 300px;
   height: 300px;
 }
-/* 
-Vissa Bilder är 235x235 istället för 300x300 
-Detta kanske förstör den responsiva designen av bootstrap
-*/
-/* .card-img-top {
-    height: 300px;
-    width:  300px;
-} */
+
+span, h1, h2, h3, h4, button, a, .btn {
+  font-family: 'Eczar', serif;
+}
+
+p, .alert-heading {
+  font-family: 'Gentium Plus', serif;
+}

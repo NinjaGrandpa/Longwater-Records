@@ -18,3 +18,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.display-1, a, h1, h5 {
+    font-family: 'Eczar', serif;
+}
+
+p {
+    font-family: 'Gentium Plus', serif;
+}

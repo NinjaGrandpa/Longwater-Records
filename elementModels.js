@@ -54,7 +54,7 @@ const createRow = function () {
 const createAlbumCard = function (album) {
   const card = document.createElement("div");
 
-  const modalId = album.albumName.replace(" ", "_").replace("'", "");
+  const modalId = album.albumName.replace(/\s+/g, '_').replace(/'/g, '');
 
   card.innerHTML = `
     <div class="card bg-cream text-dark">
@@ -87,7 +87,7 @@ const createAlbumCard = function (album) {
 
 function createAlbumModal(album) {
   const modal = document.createElement("div");
-  const modalId = album.albumName.replace(" ", "_").replace("'", "");
+  const modalId = album.albumName.replace(/\s+/g, '_').replace(/'/g, '');
 
   modal.innerHTML = `
   <div
@@ -166,7 +166,7 @@ function createCartAlert() {
               class="btn-close"
                 data-bs-dismiss="alert"
               ></button>
-              <strong>Success!</strong> Product added to cart
+              <strong>Product added to cart!</strong> 
               </div>
               <div
               class="d-flex row align-items-center mt-1 mx-0 px-0"

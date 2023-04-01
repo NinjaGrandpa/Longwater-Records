@@ -48,3 +48,11 @@ iframe {
 img {
     max-width: none;
 }
+
+h1, button, a, label {
+    font-family: 'Eczar', serif;
+}
+
+p, input {
+    font-family: 'Gentium Plus', serif;
+}
