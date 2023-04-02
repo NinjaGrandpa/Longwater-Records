@@ -1,5 +1,16 @@
 # Labb 1 - Webbutveckling med .NET
 
+## Färgschema
+
+<div>
+   <ul>
+      <li style="color: #03001C;">Black - #03001C</li>
+      <li style="color: #301E67;">Purple - #301E67</li>
+      <li style="color: #5B8FB9;">Blue - #5B8FB9</li>
+      <li style="color: #B6EADA;">Mint - #B6EADA</li>
+   </ul>
+</div>
+
 ## Uppdraget
 
 Ett lokalt företag har kontaktat dig och erbjudit dig möjligheten att skapa deras nya hemsida. De vill ha en hemsida med tre delar. Navigation ska ske genom en navbar eller liknande menysystem.
