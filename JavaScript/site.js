@@ -1,4 +1,4 @@
-import albumsJson from "/albums.json" assert { type: "json" };
+import albumsJson from "./albums.json" assert { type: "json" };
 import {
   createCartCard,
   createColumn,
