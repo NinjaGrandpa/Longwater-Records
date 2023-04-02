@@ -53,3 +53,49 @@ span, h1, h2, h3, h4, button, a, .btn {
 p, .alert-heading {
   font-family: 'Gentium Plus', serif;
 }
+
+
+.bg-dark, input, textarea {
+  background-color: #03001C !important;
+}
+
+p, h2, h3, h4, h5, strong {
+  color: #03001C !important;
+}
+
+a:hover {
+  color: #5B8FB9 !important;
+}
+
+.border, .border-bottom {
+  border-color: #5B8FB9 !important;
+}
+
+.bg-cream {
+  background-color: #B6EADA !important;
+}
+
+.text-white, a, h1, ::placeholder {
+  color: #B6EADA !important;
+}
+
+.text-bg-dark {
+  background-color: #03001C !important;
+  color: #B6EADA !important;
+}
+
+.input-group-text {
+  background-color: #301E67 !important;
+  color: #B6EADA !important;
+}
+
+button, .btn, .btn-primary {
+  color: #B6EADA !important;
+  background-color: #301E67 !important;
+}
+
+.modal-body {
+  background-color: #B6EADA !important;
+  color: #03001C !important;
+  font-weight: bold;
+}

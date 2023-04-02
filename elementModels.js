@@ -121,7 +121,7 @@ function createAlbumModal(album) {
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"
                   ></iframe>
-                  <p>
+                  <p class="p-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
                     consectetur facere illum aperiam explicabo nulla, impedit
                     cum necessitatibus sint! Quod magni dolorum consequuntur hic

@@ -70,6 +70,16 @@ p, input {
 }
 
 input, textarea {
+    background-color: #03001C !important;
+}
+
+.input-group-text {
+    background-color: #301E67 !important;
+    color: #B6EADA !important;
+}
+
+button, .btn, .btn-primary {
+    color: #B6EADA !important;
     background-color: #301E67 !important;
 }
 
