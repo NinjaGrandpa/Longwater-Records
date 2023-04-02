@@ -2,7 +2,7 @@
   {
     "albumName": "Dogrel",
     "bandName": "Fontaines D.C.",
-    "coverArtUrl": "../../Images/Products/Dogrel.webp",
+    "coverArtUrl": "../Images/Products/Dogrel.webp",
     "price": 269,
     "spotifyURL": "https://open.spotify.com/embed/album/5j54NcBr5wBCB129cdjad7?utm_source=generator",
     "amount": 1
@@ -10,7 +10,7 @@
   {
     "albumName": "A Hero's Death",
     "bandName": "Fontaines D.C.",
-    "coverArtUrl": "../../Images/Products/A Hero's Death.webp",
+    "coverArtUrl": "../Images/Products/A Hero's Death.webp",
     "price": 289,
     "spotifyURL": "https://open.spotify.com/embed/album/5uvoX0fFiT1QFpZXntsI3j?utm_source=generator",
     "amount": 1
@@ -18,7 +18,7 @@
   {
     "albumName": "Blade Runner",
     "bandName": "Vangelis",
-    "coverArtUrl": "../../Images/Products/Blade Runner.webp",
+    "coverArtUrl": "../Images/Products/Blade Runner.webp",
     "price": 269,
     "spotifyURL": "https://open.spotify.com/embed/album/6NkuCdMz5tGmHbOXAWbtCW?utm_source=generator",
     "amount": 1
@@ -26,7 +26,7 @@
   {
     "albumName": "Jehova",
     "bandName": "Hurula",
-    "coverArtUrl": "../../Images/Products/Jehova.webp",
+    "coverArtUrl": "../Images/Products/Jehova.webp",
     "price": 289,
     "spotifyURL": "https://open.spotify.com/embed/album/7mP40Mlw0dFHLP1sEZLX2h?utm_source=generator",
     "amount": 1

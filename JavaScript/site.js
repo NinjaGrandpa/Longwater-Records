@@ -1,4 +1,4 @@
-import albumsJson from "../../JavaScript/albums.json" assert { type: "json" };
+import albumsJson from "../JavaScript/albums.json" assert { type: "json" };
 import {
   createCartCard,
   createColumn,
@@ -6,7 +6,7 @@ import {
   createAlbumCard,
   createAlbumModal,
   createCartAlert,
-} from "../../JavaScript/elementModels.js";
+} from "../JavaScript/elementModels.js";
 
 const shop = document.getElementById("shopDiv");
 
