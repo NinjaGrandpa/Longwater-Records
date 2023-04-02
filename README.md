@@ -2,12 +2,14 @@
 
 ## Färgschema
 
+```html
 <ul>
 <li style="color: #03001C;">Black - #03001C</li>
 <li style="color: #301E67;">Purple - #301E67</li>
 <li style="color: #5B8FB9;">Blue - #5B8FB9</li>
 <li style="color: #B6EADA;">Mint - #B6EADA</li>
 </ul>
+```
 
 ## Uppdraget
 
