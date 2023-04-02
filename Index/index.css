@@ -11,7 +11,7 @@ textarea {
 }
 
 body {
-    background-image: url('../Images/wallpaperflare.com_wallpaper.webp');
+    background-image: url('././Images/wallpaperflare.com_wallpaper.webp');
 
     background-attachment: fixed;
     background-position: center;
