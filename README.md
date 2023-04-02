@@ -2,14 +2,22 @@
 
 ## Färgschema
 
-```html
+
 <ul>
 <li style="color: #03001C;">Black - #03001C</li>
 <li style="color: #301E67;">Purple - #301E67</li>
 <li style="color: #5B8FB9;">Blue - #5B8FB9</li>
 <li style="color: #B6EADA;">Mint - #B6EADA</li>
 </ul>
-```
+
+- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `#f03c15`
+
+<br>
+
+- ![#03001C](https://placehold.co/15x15/03001C/03001C.png) `#03001C`
+- ![#301E67](https://placehold.co/15x15/301E67/301E67.png) `#301E67`
+- ![#5B8FB9](https://placehold.co/15x15/5B8FB9/5B8FB9.png) `#5B8FB9`
+- ![#B6EADA](https://placehold.co/15x15/B6EADA/B6EADA.png) `#B6EADA`
 
 ## Uppdraget
 
