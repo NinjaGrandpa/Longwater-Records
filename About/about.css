@@ -49,7 +49,7 @@ img {
     max-width: none;
 }
 
-h1, button, a, label {
+.display-1, h1, button, a, label {
     font-family: 'Eczar', serif;
 }
 
