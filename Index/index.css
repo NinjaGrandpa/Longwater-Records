@@ -1,58 +1,59 @@
 .nav-item {
-    margin-left: 2em;
+  margin-left: 2em;
 }
 
-.nav-item .active{
-    text-decoration: underline;
+.nav-item .active {
+  text-decoration: underline;
 }
 
 textarea {
-    height: 10em;
+  height: 10em;
 }
 
 body {
-    background-image: url('./Images/wallpaperflare.com_wallpaper.webp');
+  background-image: url("../../Images/wallpaperflare.com_wallpaper.webp");
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.display-1, a, h1, h5 {
-    font-family: 'Eczar', serif;
+.display-1,
+a,
+h1,
+h5 {
+  font-family: "Eczar", serif;
 }
 
 p {
-    font-family: 'Gentium Plus', serif;
+  font-family: "Gentium Plus", serif;
 }
-
-
-/* background-color: #301E67; */
-
 
 .bg-dark {
-    background-color: #03001C !important;
+  background-color: #03001c !important;
 }
 
-.border, .border-bottom {
-    border-color: #5B8FB9 !important;
+.border,
+.border-bottom {
+  border-color: #5b8fb9 !important;
 }
 
 a:hover {
-    color: #5B8FB9 !important;
+  color: #5b8fb9 !important;
 }
 
 .btn-primary {
-    background-color: #5B8FB9 !important;
-    color:#5B8FB9 !important;
+  background-color: #5b8fb9 !important;
+  color: #5b8fb9 !important;
 }
 
-.text-white, a, h1 {
-    color: #B6EADA !important;
+.text-white,
+a,
+h1 {
+  color: #b6eada !important;
 }
-
 
 .paragraph {
-    background-color: #301E67 !important;
+  background-color: #301e67 !important;
 }
