@@ -2,10 +2,10 @@
 
 ## Färgschema
 
-- ![Black - #03001C](https://placehold.co/15x15/03001C/03001C.png) `Black - #03001C`
-- ![Purple - #301E67](https://placehold.co/15x15/301E67/301E67.png) `Purple - #301E67`
-- ![Blue - #5B8FB9](https://placehold.co/15x15/5B8FB9/5B8FB9.png) `Blue  -#5B8FB9`
-- ![Mint - #B6EADA](https://placehold.co/15x15/B6EADA/B6EADA.png) `Mint - #B6EADA`
+- ![Black - #03001C](https://placehold.co/15x15/03001C/03001C.png) `Black (#03001C)`
+- ![Purple - #301E67](https://placehold.co/15x15/301E67/301E67.png) `Purple (#301E67)`
+- ![Blue - #5B8FB9](https://placehold.co/15x15/5B8FB9/5B8FB9.png) `Blue (#5B8FB9)`
+- ![Mint - #B6EADA](https://placehold.co/15x15/B6EADA/B6EADA.png) `Mint (#B6EADA)`
 
 ## Uppdraget
 
